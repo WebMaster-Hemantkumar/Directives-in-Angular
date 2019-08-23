@@ -1,0 +1,45 @@
+<p>directive works!</p>
+
+<ul>
+ 
+      <li *ngFor="let user of users"> {{ user }} </li>
+ </ul>
+
+<br/>
+<table border="2">
+    <tr>
+       <th>Index</th>
+      <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>MobileNo</th>
+        </tr>
+       <tr *ngFor="let user of user; let i = index">
+        <td> {{ i+1 }} </td> 
+        <td>{{user.id}}</td>
+        <td>{{user.name}} </td>
+        <td>{{user.age}}</td>
+        <td>{{user.Mobile}}</td>
+        </tr>
+        </table>
+
+
+
+        <h1>Ngif Structural Directive</h1>
+ 
+<div *ngIf="isUserLoggedIn,else logout">
+
+    <h1>Welcome to You Traing Basket</h1>
+</div>
+
+
+
+
+
+<ng-template #logout>
+    <h1>You Are Not log In</h1>
+</ng-template>
+
+
+
+
